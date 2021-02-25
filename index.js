@@ -39,3 +39,35 @@ function promptMan() {
         },
     ])
 }
+
+function promptEngin() {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the engineers name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the engineers ID?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the engineers email?',
+
+        },
+        {
+            type: 'list',
+            name: 'Add next',
+            choices: [ 'Manger', 'Engineer', 'Intern', 'Exit']
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is the engineers GitHub username?',
+        },
+        
+    ])
+}
