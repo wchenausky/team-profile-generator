@@ -29,7 +29,8 @@ function promptMan() {
         },
         {
             type: 'list',
-            name: 'Add next',
+            name: 'next',
+            message: 'Add next',
             choices: [ 'Manger', 'Engineer', 'Intern', 'Exit']
         },
         {
@@ -60,13 +61,47 @@ function promptEngin() {
         },
         {
             type: 'list',
-            name: 'Add next',
+            name: 'next',
+            message: 'Add next',
             choices: [ 'Manger', 'Engineer', 'Intern', 'Exit']
         },
         {
             type: 'input',
             name: 'github',
             message: 'What is the engineers GitHub username?',
+        },
+        
+    ])
+}
+
+function promptIntern() {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the interns name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the interns ID?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the interns email?',
+
+        },
+        {
+            type: 'list',
+            name: 'next',
+            message: 'Add next',
+            choices: [ 'Manger', 'Engineer', 'Intern', 'Exit']
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the interns school and/or university?',
         },
         
     ])
