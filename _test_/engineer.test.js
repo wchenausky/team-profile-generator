@@ -1,4 +1,4 @@
-const Engin = require('../lib/engineer');
+const Engin = require('../lib/egineer');
 
 describe ('engineer', () => {
     describe('Initialization', () => {
@@ -6,9 +6,9 @@ describe ('engineer', () => {
         const enginObj = new Engin('Bill', 11, 'Bill@gmail.com', 'githubEngineer');
 
         expect(enginObj.name).toEqual('Bill')
-        expect(enginObj.id).toEqual('11')
+        expect(enginObj.id).toEqual(11)
         expect(enginObj.email).toEqual('Bill@gmail.com')
-        expect(enginObj.github).toEqual('githubEgineer')
+        expect(enginObj.github).toEqual('githubEngineer')
 
     })
 })

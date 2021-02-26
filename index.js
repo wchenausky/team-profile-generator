@@ -7,6 +7,8 @@ const Engineer = require('./lib/engineer')
 const Intern = require('./lib/intern')
 const Choice = require('inquirer/lib/objects/choice')
 
+const team = [];
+
 const welome = "Welcome to my team building website. Here you're able to enter all of your employees information into a document. Ready when you are!"
 
 function promptMan() {
@@ -102,7 +104,32 @@ function promptIntern() {
             type: 'input',
             name: 'school',
             message: 'What is the interns school and/or university?',
+        }
+   
+    ]).then((response) => {
+        const Intern = new Intern(response.name, reponse.id, response.email, response.school);
+        team.push(intern);
+        newTeamMember();
+    })
+};
+
+function newTeamMember () {
+    inquirer.prompt ([
+        {
+            type: 'list',
+            name: "Which is the next Employee?",
+            choices: ['Engineer', 'Intern', 'Done']
         },
-        
-    ])
+    ]).then((response) => {
+        if (response.nextEmployee === "Engineer") {
+            promptEngin()
+        }
+        else if (response.nextEmployee === "Intern") {
+            promptIntern()
+        }
+        else {
+            makeTeam()
+        }
+    })
 }
+

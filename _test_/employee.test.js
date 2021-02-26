@@ -6,7 +6,7 @@ describe('employee', () => {
         const empObj = new employee('Bob', 10, 'Bob@yahoo.com');
 
         expect(empObj.name).toEqual('Bob')
-        expect(empObj.id).toEqual('10')
+        expect(empObj.id).toEqual(10)
         expect(empObj.email).toEqual('Bob@yahoo.com')
     })
 })
