@@ -7,7 +7,7 @@ describe('employee', () => {
 
         expect(empObj.name).toEqual('Bob')
         expect(empObj.id).toEqual('10')
-        expect(empObj.email).toEqual('Bob@yahpp.com')
+        expect(empObj.email).toEqual('Bob@yahoo.com')
     })
 })
 });
