@@ -2,8 +2,8 @@
 # Team Roster Generator
   ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg) <br>
 
+A node and jest base application for generating a team roster. Easy to use and read, to keep track of all of your emplyees important information!
 
-  undefined
 
   ## Table of Contents
   * [Installation](#Installation)
